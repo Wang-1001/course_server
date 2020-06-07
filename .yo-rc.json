@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.niit.scs.sourseserver",
+      "nativeLanguage": "zh-cn"
+    },
+    "jhipsterVersion": "6.9.1",
+    "applicationType": "monolith",
+    "baseName": "courseserver",
+    "packageName": "com.niit.scs.sourseserver",
+    "packageFolder": "com/niit/scs/sourseserver",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZmExZTkzMWY1NzEzNGFmNmVjMDNkNGM2N2MxMWVjODliY2MyNDYyMmMwMzU3MDc2MGEwNDk0NmJiMTRmYjlhZDMzNDFmMTdlOWFlZWE4NjQ3MWFkMjYxYjRkODNjZjU2ZmE1N2E0NjY5ZDhkYjk1Y2RiOWQxNzg3Y2MwNTFjNDQ=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1591506520147,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "zh-cn",
+    "languages": ["zh-cn", "en"],
+    "blueprints": []
+  }
+}
