@@ -3,9 +3,11 @@ package com.niit.scs.sourseserver.service.impl;
 import com.alibaba.fastjson.util.TypeUtils;
 import com.niit.scs.sourseserver.domain.CafeInfo;
 import com.niit.scs.sourseserver.service.CafeInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +15,15 @@ import java.util.Map;
 @Service
 public class CafeInfoServiceImpl implements CafeInfoService {
 
-    //注入
+    /*二二二
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    三三三
+    @Resource
+    JdbcTemplate jdbcTemplate;*/
+
+    //四四四 构造器注入
     private final JdbcTemplate jdbcTemplate;
 
     public CafeInfoServiceImpl(JdbcTemplate jdbcTemplate) {
@@ -22,6 +32,11 @@ public class CafeInfoServiceImpl implements CafeInfoService {
 
     @Override
     public List<CafeInfo> getAllCafe() {
+
+        /* 一一一 通常使用方法
+        * JdbcTemplate jdbcTemplate = new JdbcTemplate();
+        * */
+
         String sql="select * from cafe_info";
 
         //List<Map<String,Object>> 根据jdbcTemplate.的返回类型确定
