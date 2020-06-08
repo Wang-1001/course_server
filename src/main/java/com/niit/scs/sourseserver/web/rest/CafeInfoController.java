@@ -4,6 +4,7 @@ package com.niit.scs.sourseserver.web.rest;
 import com.niit.scs.sourseserver.domain.CafeInfo;
 
 import com.niit.scs.sourseserver.service.CafeInfoService;
+import com.niit.scs.sourseserver.service.dto.CafeBox;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,6 +41,16 @@ public class CafeInfoController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e);
         }*/
 
+    }
+
+    /**
+     * 咖啡礼盒
+     * @return
+     */
+    @GetMapping("/dmeo/cafe-box")
+    public ResponseEntity getCafeBox(){
+        CafeBox result = this.cafeInfoService.getGiftBox();
+        return ResponseEntity.ok(result);
     }
 
 }
