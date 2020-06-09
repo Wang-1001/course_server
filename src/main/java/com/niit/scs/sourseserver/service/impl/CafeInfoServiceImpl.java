@@ -14,7 +14,6 @@ import java.util.Random;
 
 @Service
 public class CafeInfoServiceImpl implements CafeInfoService {
-
     /*二二二
     @Autowired
     JdbcTemplate jdbcTemplate;
@@ -30,29 +29,31 @@ public class CafeInfoServiceImpl implements CafeInfoService {
         this.jdbcTemplate = jdbcTemplate;
     }
 
+    /**
+     * 获取全部商品
+     * @return
+     */
     @Override
     public List<CafeInfo> getAllCafe() {
-
         /* 一一一 通常使用方法
         * JdbcTemplate jdbcTemplate = new JdbcTemplate();
         * */
 
+        //编写 SQL 查询
         String sql="select * from cafe_info";
 
-        //List<Map<String,Object>> 根据jdbcTemplate.的返回类型确定
+        //执行 SQL 得到的结果类型          List<Map<String,Object>> 根据 jdbcTemplate. 的返回类型确定
         List<Map<String,Object>> sqlResult = jdbcTemplate.queryForList(sql);
 
-        //将 List<Map<String,Object>> 转化为 List<CafeInfo>
+        //将 SQL得到的结构类型 (List<Map<String,Object>>) 转化为最终结果类型 (List<CafeInfo>)
         List<CafeInfo> result = new ArrayList<CafeInfo>();
 
-        //把 sqlResult 查询到的结构搬运到 result 里面
-        /* sqlResult.for 回车，生成 for 循环*/
+        //把 sqlResult 查询到的结构搬运到 result 里面          sqlResult.for 回车，生成 for 循环
         for (Map<String, Object> sqlItem : sqlResult) {// sqlItem 对应数据库中的每一行
+            //新初始化一个实例
             CafeInfo cafeInfo = new CafeInfo();
 
-
             //cafeInfo.setId(sqlItem.get("id"));//报错，需要把 Object 类型转化为 Long 类型  --->在pom.xml中添加依赖
-
             /*在pom.xml中添加依赖
                 <dependency>
                     <groupId>com.alibaba</groupId>

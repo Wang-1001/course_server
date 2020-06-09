@@ -24,7 +24,10 @@ public class CafeInfoController {
         this.cafeInfoService = cafeInfoService;
     }
 
-
+    /**
+     * 获取全部商品
+     * @return
+     */
     @GetMapping("/demo/items")
     //     返回类型
     public ResponseEntity getAllCafe(){

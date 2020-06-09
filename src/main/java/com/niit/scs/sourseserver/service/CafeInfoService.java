@@ -8,6 +8,10 @@ import java.util.List;
 
 public interface CafeInfoService {
 
+    /**
+     * 获取全部商品
+     * @return
+     */
     //返回类型      方法名（传入参数）
     List<CafeInfo> getAllCafe();
 
